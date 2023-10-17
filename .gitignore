@@ -10,15 +10,23 @@
 /wp-content/languages
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
+/wp-content/ai1wm-backups/
+/wp-content/wflogs/
+/wp-content/cache/
+/wp-content/w3tc-config/
+/wp-content/upgrad*/
 /wp-includes/
 /index.php
 /license.txt
 /readme.html
 /wp-*.php
+/wordfence-*.php
 /xmlrpc.php
+
 
 # Configuration
 wp-config.php
+.user.ini
 
 # Example themes
 /wp-content/themes/twenty*/

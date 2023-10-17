@@ -1,0 +1,124 @@
+.single-knowledge-base .hero-subpage__texts {
+    max-width: 770px;
+}
+
+.single-knowledge-base .hero-subpage__heading {
+    text-transform: none;
+}
+
+.single-knowledge-base__header {
+    margin: 120px 0 60px;
+}
+
+@media screen and (min-width: 990px) {
+    .single-knowledge-base__header {
+        margin: 160px 0 59px;
+    }
+
+    .single-knowledge-base__header-wrapper {
+        display: flex;
+        column-gap: 136px;
+    }
+}
+
+.single-knowledge-base__section-title {
+    font-size: 31.3px;
+    margin-bottom: 32px;
+}
+
+.single-knowledge-base__content {
+    margin-bottom: 92px;
+}
+
+@media screen and (min-width: 990px) {
+    .single-knowledge-base__content {
+        margin-bottom: 207px;
+    }
+}
+
+.single-knowledge-base__content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 990px) {
+    .single-knowledge-base__content-wrapper {
+        flex-direction: row;
+        column-gap: 136px;
+    }
+}
+
+.single-knowledge-base__content__right-col {
+    margin-bottom: 270px;
+}
+
+@media screen and (min-width: 990px) {
+    .single-knowledge-base__content__right-col {
+        margin-bottom: 0;
+    }
+}
+
+.single-knowledge-base__content-heading {
+    margin-bottom: 11px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 990px) {
+    .single-knowledge-base__content-heading {
+        margin-bottom: 10px;
+    }
+}
+
+.single-knowledge-base__content .rte {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.single-knowledge-base__content .rte ul,
+.single-knowledge-base__content .rte ol {
+    padding-left: 23px;
+}
+
+@media screen and (min-width: 990px) {
+    .single-knowledge-base__content__left-col {
+        padding-top: 114px;
+    }
+
+    .single-knowledge-base__date-wrapper {
+        margin-top: 158px;
+    }
+
+    .single-knowledge-base__header__right-col {
+        padding-right: 5px;
+    }
+}
+
+.single-knowledge-base__header__right-col .rte {
+    line-height: 1.6;
+}
+
+.single-knowledge-base__tag__title {
+    font-size: 31.3px;
+    margin-bottom: 32px;
+}
+
+.single-knowledge-base__block-tag {
+    margin-bottom: 12px;
+}
+
+.single-knowledge-base__tag {
+    display: inline-block;
+    padding: 10px 30px;
+    color: var(--color-white);
+    background: var(--color-btn);
+}
+
+.single-knowledge-base__date-wrapper {
+    margin-top: 60px;
+}
+
+.single-knowledge-base__date {
+    display: inline-block;
+    font-size: 31.3px;
+    color: var(--color-btn);
+}

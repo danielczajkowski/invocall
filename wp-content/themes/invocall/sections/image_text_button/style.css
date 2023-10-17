@@ -1,0 +1,127 @@
+.image-text-button {
+    padding: 91px 0 60px;
+}
+
+@media screen and (min-width: 990px) {
+    .image-text-button {
+        padding: 90px 0 158px;
+    }
+}
+
+.image-text-button__section-title {
+    margin-bottom: 57px;
+    padding-right: 31px;
+}
+
+@media screen and (min-width: 990px) {
+    .image-text-button__section-title {
+        padding-top: 13px;
+        padding-right: 0;
+        margin-bottom: 0;
+        border-top: none;
+    }
+
+    .image-text-button__section-title::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 196px;
+        height: 1px;
+        background: var(--color-btn);
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .image-text-button__wrapper {
+        display: flex;
+        column-gap: 24px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .image-text-button__left-col__wrapper {
+        width: 100%;
+        max-width: 306px;
+    }
+
+    .image-text-button__left-col {
+        position: sticky;
+        top: 101px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .image-text-button__right-col {
+        border-top: 1px solid var(--color-border2);
+        padding-top: 30px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .image-text-button__right-col {
+        display: flex;
+        column-gap: 24px;
+    }
+}
+
+.image-text-button__image {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .image-text-button__image {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .image-text-button__image {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .image-text-button__image {
+        width: 100%;
+        min-width: 526px;
+        max-width: 526px;
+        margin-bottom: 0;
+    }
+}
+
+.image-text-button__image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .image-text-button__content {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .image-text-button__content {
+        text-align: left;
+    }
+}
+
+.image-text-button__content .rte {
+    line-height: 1.6;
+    margin-bottom: 32px;
+    padding-right: 1px;
+}
+
+@media screen and (min-width: 1440px) {
+    .image-text-button__content .rte {
+        margin-bottom: 56px;
+    }
+}
+
+.image-text-button__btn {
+    width: 100%;
+    max-width: 346px;
+    margin: 0 auto;
+    padding: 15px 0;
+}

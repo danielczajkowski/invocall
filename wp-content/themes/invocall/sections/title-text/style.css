@@ -1,0 +1,48 @@
+.title-text {
+    margin: 91px 0 95px;
+}
+
+@media screen and (min-width: 990px) {
+    .title-text {
+        margin: 161px 0 127px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .title-text__wrapper {
+        display: flex;
+        column-gap: 101px;
+    }
+
+    .title-text__left-col__wrapper {
+        min-width: 231px;
+        width: 100%;
+        max-width: 231px;
+    }
+
+    .title-text__left-col {
+        position: sticky;
+        top: 101px;
+    }
+
+    .title-text__right-col {
+        padding-right: 6px;
+    }
+}
+
+.title-text__section-title {
+    font-size: 31.3px;
+    margin-bottom: 61px;
+}
+
+@media screen and (min-width: 990px) {
+    .title-text__section-title {
+        margin-bottom: 0;
+    }
+}
+
+.title-text__right-col {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.4;
+}

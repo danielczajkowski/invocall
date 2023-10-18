@@ -191,6 +191,16 @@ button:hover,
     background: var(--color-btn-hover);
 }
 
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-btn);
+}
+
+.btn-secondary:hover {
+    background: var(--color-btn-hover);
+    border-color: #2877ff;
+}
+
 .btn--link {
     position: relative;
     padding-right: 24px;

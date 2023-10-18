@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/image_text_button/style.css" />
 
+
 <section class="image-text-button">
     <div class="page--width">
         <div class="image-text-button__wrapper">

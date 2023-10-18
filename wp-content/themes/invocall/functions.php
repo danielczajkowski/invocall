@@ -1,5 +1,11 @@
 <?php
 
+global $styles_arr;
+global $filter_arr;
+
+$styles_arr = [];
+$filter_arr = [];
+
 function wpse_setup_theme() {
    add_theme_support( 'post-thumbnails' );
    add_image_size( 'case-study-slider-thumb', 327, 215, true );
@@ -164,3 +170,50 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 //     return $post_types;
 // }
 // add_filter('pll_get_post_types', 'add_cpt_to_pll', 10, 2);
+
+if ( ! function_exists( 'load_section_styles' ) ) {
+
+	function load_section_styles( $path, $key, $file_name = 'style' ) {
+		global $styles_arr;
+		global $filter_arr;
+
+		$theme_info = wp_get_theme();
+		$theme_root = get_theme_root();
+        $replaces   = [ realpath( $theme_root . DIRECTORY_SEPARATOR . $theme_info->stylesheet ) ];
+
+		if ( $theme_info->stylesheet !== $theme_info->template ) {
+            $replaces[] = realpath( $theme_root . DIRECTORY_SEPARATOR . $theme_info->template );
+		}
+
+		if ( false !== realpath( $path ) ) {
+			$path = str_replace( $replaces, '', realpath( $path ) );
+		}
+
+        $file = realpath( get_theme_file_path( $path . DIRECTORY_SEPARATOR . "$file_name.css" ) );
+
+		if ( ! in_array( $key, $styles_arr ) && file_exists( $file ) && ! in_array( $key, $filter_arr ) ) {
+			$style = file_get_contents( $file );
+
+			if ( ! empty($style) ) {
+				$style = check_styles_urls( $style );
+
+				array_push( $styles_arr, $key );
+
+				?><style><?php echo $style; ?></style><?php
+			}
+		}
+	}
+
+}
+
+if ( ! function_exists( 'check_styles_urls' ) ) {
+
+	function check_styles_urls( $string ) {
+		$path    = get_theme_file_uri( '/assets/images' );
+		$url     = "url($path$3)";
+		$pattern = '/url\s*\(\s*[\'"]?(?!(((?: https?: )?\/\/)|(?: data\: ?: )|(?: #)))([^\'"\)]+)[\'"]?\s*\)/i';
+
+		return preg_replace( $pattern, $url, $string );
+	}
+
+}

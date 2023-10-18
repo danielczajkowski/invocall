@@ -71,3 +71,14 @@ desktopHeaderItem.forEach(element => {
     const desktopHeaderLink = element.querySelector('a');
     desktopHeaderLink.removeAttribute('href');
 });
+
+
+const nextSectionScroll = document.querySelectorAll('.next-section-scroll__btn');
+if( nextSectionScroll ) {
+    nextSectionScroll.forEach(element => {
+        element.addEventListener('click', ()=>{
+            const nextSection = element.closest('section').nextElementSibling;
+            nextSection.scrollIntoView({behavior: "smooth"});
+        });
+    });
+}

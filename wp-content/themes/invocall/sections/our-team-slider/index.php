@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/swiper/swiper-bundle.css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/our-team-slider/style.css" />
+
 
 <section class="our-team">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/swiper/swiper-bundle.css" />
+    <?php load_element_styles( 'sections/our-team-slider', 'our-team-slider-style' ); ?>
     <?php $group = get_sub_field('group');
     if( $group ): ?>
         <div class="page--width">

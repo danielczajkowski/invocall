@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/columns-with-icons/style.css" />
-
 <section class="columns-icons">
+    <?php load_element_styles( 'sections/columns-with-icons', 'columns-with-icons-style' ); ?>
     <div class="page--width">
         <div class="columns-icons__wrapper">
             <?php if( !empty( get_sub_field('heading') ) ): ?>

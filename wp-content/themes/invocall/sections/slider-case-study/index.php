@@ -1,7 +1,6 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/swiper/swiper-bundle.css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/slider-case-study/style.css" />
-
 <section class="slider-case-study">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/swiper/swiper-bundle.css" />
+    <?php load_element_styles( 'sections/slider-case-study', 'slider-case-study-style' ); ?>
     <div class="page--width">
         <div class="slider-case-study__wrapper">
             <div class="slider-case-study__left-col">

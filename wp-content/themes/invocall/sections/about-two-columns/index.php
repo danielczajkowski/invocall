@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/about-two-columns/style.css" />
-
 <section class="two-columns">
+    <?php load_element_styles( 'sections/about-two-columns', 'about-two-columns-style' ); ?>
     <div class="page--width">
         <div class="two-columns__wrapper">
             <?php if( !empty( get_sub_field('section_title') ) ): ?>

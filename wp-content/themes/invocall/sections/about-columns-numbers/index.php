@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/about-columns-numbers/style.css" />
-
 <div class="about-columns-numbers">
+    <?php load_element_styles( 'sections/about-columns-numbers', 'about-columns-numbers-style' ); ?>
     <div class="page--width">
         <div class="about-columns-numbers__wrapper">
             <?php if( !empty( get_sub_field('section_title') ) ): ?>

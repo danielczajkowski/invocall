@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/two-columns-blocks/style.css" />
-
 <section class="two-columns-blocks">
+    <?php load_element_styles( 'sections/two-columns-blocks', 'two-columns-blocks-style' ); ?>
     <div class="page--width">
         <div class="two-columns-blocks__wrapper">
             <?php

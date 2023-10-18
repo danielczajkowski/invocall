@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/numbers_texts/style.css" />
-
 <section class="numbers-texts">
+    <?php load_element_styles( 'sections/numbers_texts', 'numbers_texts-style' ); ?>
     <div class="page--width">
         <div class="numbers-texts__wrapper">
             <?php if( !empty( get_sub_field('section_title') ) ): ?>

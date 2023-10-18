@@ -1,9 +1,8 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/swiper/swiper-bundle.css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/date-slider/style.css" />
-
 <?php if( have_rows( 'repeater' ) ): ?>
 
 <section class="date-slider">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/swiper/swiper-bundle.css" />
+    <?php load_element_styles( 'sections/date-slider', 'date-slider-style' ); ?>
     <div class="date-slider__wrapper">
         <div class="swiper date-slider__swiper">
             <div class="date-slider__swiper-navigation hidden-flex-tablet-mobile">

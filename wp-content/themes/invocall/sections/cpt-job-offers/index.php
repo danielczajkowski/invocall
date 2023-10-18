@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/cpt-job-offers/style.css" />
-
 <section id="careerOffers" class="cpt-job-offers">
+    <?php load_element_styles( 'sections/cpt-job-offers', 'cpt-job-offers-style' ); ?>
     <div class="page--width">
         <div class="cpt-job-offers__wrapper">
             <div class="cpt-job-offers__left-col__wrapper">

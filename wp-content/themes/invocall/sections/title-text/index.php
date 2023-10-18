@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/title-text/style.css" />
-
 <section class="title-text">
+    <?php load_element_styles( 'sections/title-text', 'title-text-style' ); ?>
     <div class="page--width">
         <div class="title-text__wrapper">
             <?php if( !empty( get_sub_field('section_title') ) ): ?>

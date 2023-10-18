@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/texts-button/style.css" />
-
 <section class="texts-button">
+    <?php load_element_styles( 'sections/texts-button', 'texts-button-style' ); ?>
     <div class="page--width">
         <div class="texts-button__wrapper">
             <?php if( !empty( get_sub_field('section_title') ) ): ?>

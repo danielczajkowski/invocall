@@ -1,8 +1,7 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/columns-numbers-texts/style.css" />
-
 <?php $sectionSettings = get_sub_field('section_settings'); ?>
 
 <section class="columns-numbers-texts">
+    <?php load_element_styles( 'sections/columns-numbers-texts', 'columns-numbers-texts-style' ); ?>
     <?php if( !empty( $sectionSettings['background'] ) ): ?>
         <div class="columns-numbers-texts__background-wrapper">
             <figure class="columns-numbers-texts__background">

@@ -171,9 +171,9 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 // }
 // add_filter('pll_get_post_types', 'add_cpt_to_pll', 10, 2);
 
-if ( ! function_exists( 'load_section_styles' ) ) {
+if ( ! function_exists( 'load_element_styles' ) ) {
 
-	function load_section_styles( $path, $key, $file_name = 'style' ) {
+	function load_element_styles( $path, $key, $file_name = 'style' ) {
 		global $styles_arr;
 		global $filter_arr;
 

@@ -1,7 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/image_text_button/style.css" />
-
-
 <section class="image-text-button">
+    <?php load_element_styles( 'sections/image_text_button', 'image_text_button-style' ); ?>
     <div class="page--width">
         <div class="image-text-button__wrapper">
             <?php if( !empty( get_sub_field('heading') ) ): ?>

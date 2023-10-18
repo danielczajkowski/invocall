@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/section-about/style.css" />
-
 <section id="homeAbout-us" class="about-us">
+    <?php load_element_styles( 'sections/section-about', 'section-about-style' ); ?>
     <div class="about-us__wrapper page--width">
         <div class="about-us__left-col__wrapper">
             <div class="about-us__left-col">

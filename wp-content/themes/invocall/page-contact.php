@@ -4,9 +4,9 @@
 
 <?php get_header(); ?>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/templates/page-contact/style.css" />
-
 <section class="contact-page">
+    <?php load_element_styles( 'assets/css/templates/page-contact', 'page-contact-style' ); ?>
+
     <div class="page--width">
         <div class="contact-page__header hidden-tablet-mobile">
             <h1 class="contact-page__title"><?php the_title(); ?></h1>

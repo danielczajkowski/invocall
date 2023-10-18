@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/templates/404/style.css" />
-
 <div class="error-page">
+  <?php load_element_styles( 'assets/css/templates/404', '404-style' ); ?>
+
   <div class="error-page__wrapper">
     <figure class="error-page__background-wrapper">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/404-mobile.png" alt="Invocall Page Not Found" class="error-page__background--mobile"/>

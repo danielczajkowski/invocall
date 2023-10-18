@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/cta/style.css" />
-
 <section class="cta">
+    <?php load_element_styles( 'sections/cta', 'cta-style' ); ?>
     <div class="cta__wrapper">
         <?php $background = get_sub_field('background');
         if( !empty( $background ) ): ?>

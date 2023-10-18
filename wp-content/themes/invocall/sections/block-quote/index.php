@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sections/block-quote/style.css" />
-
 <section class="blocks-quote">
+    <?php load_element_styles( 'sections/block-quote', 'block-quote-style' ); ?>
     <div class="page--width">
         <div class="blocks-quote__wrapper">
             <?php if( !empty( get_sub_field('heading') ) ): ?>

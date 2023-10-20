@@ -9,6 +9,7 @@ $filter_arr = [];
 function wpse_setup_theme() {
    add_theme_support( 'post-thumbnails' );
    add_image_size( 'case-study-slider-thumb', 327, 215, true );
+   add_image_size( 'easy-schema', 306, 260, true );
 }
 
 add_action( 'after_setup_theme', 'wpse_setup_theme' );

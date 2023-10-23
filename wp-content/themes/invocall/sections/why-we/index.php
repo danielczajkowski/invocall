@@ -1,19 +1,30 @@
+<?php
+    $section_title = get_sub_field('section_title') ?: '';
+    $group = get_sub_field('group') ?: array();
+
+    if($group) {
+    }
+
+?>
+
+<?php if( $group ): ?>
 <section class="why_we">
     <?php load_element_styles( 'sections/why-we/dist', 'why-we-style' ); ?>
     <div class="page--width">
-        <div class="why_we__wrapper">
-            <?php if( !empty( get_sub_field('section_title') ) ): ?>
-                <div class="why_we__left-col__wrapper">
-                    <div class="why_we__left-col">
-                        <h3 class="why_we__section-title section-title"><?php the_sub_field('section_title'); ?></h3>
+        <div class="why_we__wrapper offer__wrapper">
+            <?php if( $section_title ): ?>
+                <div class="why_we__left-col__wrapper offer__col offer__col--left">
+                    <div class="why_we__left-col offer__col--header">
+                        <h3 class="why_we__section-title section-title"><?php echo $section_title; ?></h3>
                     </div>
                 </div>
             <?php endif; ?>
-            <?php
-            $group = get_sub_field('group');
-            if( $group ): ?>
-                <h1>why_we</h1>
+            <?php if( $group ): ?>
+                <div class="offer__col offer__col--right">
+
+                </div>
             <?php endif; ?>
         </div>
     </div>
 </section>
+<?php endif; ?>

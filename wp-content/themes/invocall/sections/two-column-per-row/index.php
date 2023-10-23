@@ -1,7 +1,6 @@
-<?php 
+<?php
     $section_title = get_sub_field('section_title') ?: '';
     $group = get_sub_field('group') ?: array();
-
 
     if($group) {
     }

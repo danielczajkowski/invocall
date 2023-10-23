@@ -6,8 +6,9 @@
 }
 @media screen and (min-width: 990px) {
   .offer__col--left {
-    width: 100%;
-    max-width: 306px;
+    max-width: 100%;
+    width: 306px;
+    flex: 0 0 auto;
   }
 }
 .offer__col--right > div {
@@ -21,6 +22,11 @@
 @media screen and (min-width: 990px) {
   .offer__col--right > div:first-child {
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 990px) {
+  .offer__col--right > div:last-child {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 990px) {
@@ -43,6 +49,22 @@
   font-size: 20px;
 }
 
+.single-offers section:not(:first-of-type) {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 990px) {
+  .single-offers section:not(:first-of-type) {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single-offers section:not(:first-of-type) {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+}
 @media screen and (min-width: 990px) {
   .single-offers .hero-subpage + section {
     margin-top: 180px;

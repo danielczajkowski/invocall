@@ -2,9 +2,6 @@
     $section_title = get_sub_field('section_title') ?: '';
     $group = get_sub_field('group') ?: array();
 
-    if($group) {
-    }
-
 ?>
 
 <?php if( $group ): ?>
@@ -21,7 +18,16 @@
             <?php endif; ?>
             <?php if( $group ): ?>
                 <div class="offer__col offer__col--right">
-
+                    <div class="data_info__items">
+                    <?php foreach( $group as $item ):
+                        $width = $item['width'] ?: '';
+                        $label = $item['label'] ?: '';
+                    ?>
+                        <span class="data_info__item data_info__item--<?php echo $width;  ?>">
+                            <?php echo $label; ?>
+                        </span>
+                    <?php endforeach; ?>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>

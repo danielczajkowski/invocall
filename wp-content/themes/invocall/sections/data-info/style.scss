@@ -1,0 +1,84 @@
+.data_info {
+    color: #fff;
+    background-color: #0A1322;
+    padding: 75px 0;
+
+    &__items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 24px;
+    }
+    &__item {
+        box-sizing: border-box;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 1.6;
+        cursor: default;
+
+        border: 1px solid #B9BBD1;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), #0A1322;
+
+        padding: 13px 20px;
+
+        min-width: 25%;
+
+        &--200 {
+            @media screen and (min-width: 990px) {
+                min-width: calc(22% - 14px);
+            }
+            @media screen and (min-width: 1200px) {
+                min-width: calc(22% - 14px);
+            }
+            @media screen and (min-width: 1440px) {
+                min-width: calc(22% - 13px);
+            }
+        }
+        &--300 {
+            @media screen and (min-width: 990px) {
+                min-width: calc(33% - 14px);
+            }
+            @media screen and (min-width: 1200px) {
+                min-width: calc(33% - 14px);
+            }
+            @media screen and (min-width: 1440px) {
+                min-width: calc(33% - 13px);
+            }
+        }
+        &--400 {
+            @media screen and (min-width: 990px) {
+                min-width: calc(45% - 14px);
+            }
+            @media screen and (min-width: 1200px) {
+                min-width: calc(45% - 14px);
+            }
+            @media screen and (min-width: 1440px) {
+                min-width: calc(45% - 13px);
+            }
+        }
+        &--500 {
+            @media screen and (min-width: 990px) {
+                min-width: calc(55% - 14px);
+            }
+            @media screen and (min-width: 1200px) {
+                min-width: calc(55% - 14px);
+            }
+            @media screen and (min-width: 1440px) {
+                min-width: calc(55% - 13px);
+            }
+        }
+        &--700 {
+            @media screen and (min-width: 990px) {
+                min-width: calc(78% - 14px);
+            }
+            @media screen and (min-width: 1200px) {
+                min-width: calc(78% - 14px);
+            }
+            @media screen and (min-width: 1440px) {
+                min-width: calc(78% - 13px);
+            }
+        }
+    }
+}

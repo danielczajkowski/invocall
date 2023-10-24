@@ -44,6 +44,10 @@
 .content_bottom {
   line-height: 1.6;
 }
+.content_top * + *:not(:first-child),
+.content_bottom * + *:not(:first-child) {
+  margin-top: 26px;
+}
 
 .content_bottom {
   font-size: 20px;

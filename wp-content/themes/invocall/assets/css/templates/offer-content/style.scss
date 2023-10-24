@@ -55,6 +55,12 @@
 .content_top,
 .content_bottom {
     line-height: 1.6;
+
+    * + * {
+        &:not(:first-child) {
+            margin-top: 26px;
+        }
+    }
 }
 
 .content_bottom {

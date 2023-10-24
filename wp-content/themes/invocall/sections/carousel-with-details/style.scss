@@ -1,0 +1,114 @@
+.carousel_with_details {
+    position: relative;
+    overflow: hidden;
+
+    &__swiper {
+        max-width: 100%;
+        overflow: visible;
+    }
+    &__tile {
+        box-sizing: border-box;
+        color: #FFF;
+        background-color: #0A1322;
+        padding: 20px;
+        height: 100%;
+
+        @media screen and (min-width: 650px) {
+            padding: 30px;
+        }
+    }
+    &__header {
+        font-weight: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+
+        @media screen and (min-width: 650px) {
+            font-size: 20px;
+        }
+
+        & + .carousel_with_details__content {
+            margin-top: 24px;
+        }
+    }
+    &__content {
+        color: #FFF;
+        font-size: 14px;
+        line-height: 1.6;
+
+        @media screen and (min-width: 650px) {
+            font-size: 16px;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+
+        @media screen and (min-width: 650px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__button {
+        padding: 15px 32px;
+        letter-spacing: 0.3px;
+    }
+    &__navigation {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 650px) {
+            margin-right: 50px;
+            margin-bottom: 0;
+        }
+
+        &__button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            width: 49px;
+            height: 49px;
+            align-items: center;
+            justify-content: center;
+
+            &--prev {
+                margin-right: 24px;
+            }
+        }
+    }
+
+
+    .offer__col--header {
+        position: relative;
+        top: unset;
+    }
+
+    .swiper-slide {
+        height: auto;
+        min-height: 250px;
+
+        @media screen and (min-width: 990px) {
+            min-height: 340px;
+        }
+    }
+
+    .offer__col--right {
+
+        @media screen and (min-width: 990px) {
+            flex: 0 0 auto;
+            max-width: calc(100% - 320px);
+        }
+
+        @media screen and (min-width: 1200px) {
+            max-width: calc(100% - 282px);
+        }
+    }
+}

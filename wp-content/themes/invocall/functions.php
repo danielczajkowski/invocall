@@ -2,9 +2,13 @@
 
 global $styles_arr;
 global $filter_arr;
+global $scripts_arr;
+global $filter_scripts_arr;
 
 $styles_arr = [];
 $filter_arr = [];
+$scripts_arr = [];
+$filter_scripts_arr = [];
 
 function wpse_setup_theme() {
    add_theme_support( 'post-thumbnails' );
@@ -215,6 +219,22 @@ if ( ! function_exists( 'check_styles_urls' ) ) {
 		$pattern = '/url\s*\(\s*[\'"]?(?!(((?: https?: )?\/\/)|(?: data\: ?: )|(?: #)))([^\'"\)]+)[\'"]?\s*\)/i';
 
 		return preg_replace( $pattern, $url, $string );
+	}
+
+}
+
+if ( ! function_exists( 'load_libs_script' ) ) {
+
+	function load_libs_script( $path, $name, $deps = [], $base = 'assets/libraries/js' ) {
+		add_action( 'wp_footer', function() use ( $path, $name, $deps, $base ) {
+			wp_enqueue_script(
+				$name,
+				get_theme_file_uri( "/$base/$path/index.min.js" ),
+				$deps,
+				filemtime( get_theme_file_path( "/$base/$path/index.min.js" ) ),
+				true
+			);
+		}, 1);
 	}
 
 }

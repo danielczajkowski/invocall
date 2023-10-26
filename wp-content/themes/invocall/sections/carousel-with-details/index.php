@@ -20,7 +20,7 @@
     <?php load_libs_script('swiper', 'swiper'); ?>
     <?php load_libs_script('carousel-with-details', 'carousel-with-details-scripts', ['swiper'], 'sections/'); ?>
     <?php load_element_styles( 'assets/libraries/css/swiper', 'swiper-style' ); ?>
-    <?php load_element_styles( 'sections/carousel-with-details/dist', 'carousel-with-details-style' ); ?>
+    <?php load_element_styles( 'sections/carousel-with-details', 'carousel-with-details-style' ); ?>
     <div class="page--width">
         <div class="carousel_with_details__wrapper offer__wrapper">
             <?php if( $section_title ): ?>

@@ -14,7 +14,7 @@
 
 <?php if( $group ): ?>
 <section class="why-we">
-    <?php load_element_styles( 'sections/why-we/dist', 'why-we-style' ); ?>
+    <?php load_element_styles( 'sections/why-we', 'why-we-style' ); ?>
     <div class="page--width">
         <div class="why-we__wrapper offer__wrapper">
             <?php if( $section_title ): ?>

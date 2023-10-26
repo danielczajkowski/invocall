@@ -10,7 +10,7 @@
     <?php load_libs_script('swiper', 'swiper'); ?>
     <?php load_libs_script('carousel', 'carousel-scripts', ['swiper'], 'sections/'); ?>
     <?php load_element_styles( 'assets/libraries/css/swiper', 'swiper-style' ); ?>
-    <?php load_element_styles( 'sections/carousel/dist', 'carousel-style' ); ?>
+    <?php load_element_styles( 'sections/carousel', 'carousel-style' ); ?>
     <span class="carousel__bg--gradient"></span>
 <?php if( $tiles ): ?>
     <div class="carousel__swiper swiper">

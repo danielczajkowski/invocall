@@ -6,7 +6,7 @@
 <?php if( $top_content || $decorative_text): ?>
 <section class="content-with-decorative-text">
     <?php load_libs_script('content-with-decorative-text', 'content-with-decorative-text-scripts', [], 'sections/'); ?>
-    <?php load_element_styles( 'sections/content-with-decorative-text/dist', 'content-with-decorative-text-style' ); ?>
+    <?php load_element_styles( 'sections/content-with-decorative-text', 'content-with-decorative-text-style' ); ?>
     <div class="page--width">
     <?php if( $top_content ): ?>
         <div class="content-with-decorative-text__content">

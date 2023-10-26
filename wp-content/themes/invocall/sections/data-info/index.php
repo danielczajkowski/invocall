@@ -6,7 +6,7 @@
 
 <?php if( $group ): ?>
 <section class="data_info">
-    <?php load_element_styles( 'sections/data-info/dist', 'data-info-style' ); ?>
+    <?php load_element_styles( 'sections/data-info', 'data-info-style' ); ?>
     <div class="page--width">
         <div class="data_info__wrapper offer__wrapper">
             <?php if( $section_title ): ?>

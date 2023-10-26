@@ -6,7 +6,7 @@
 
 <?php if( $tiles ): ?>
 <section class="how-it-looks">
-    <?php load_element_styles( 'sections/how-it-looks/dist', 'how-it-looks-style' ); ?>
+    <?php load_element_styles( 'sections/how-it-looks', 'how-it-looks-style' ); ?>
     <div class="page--width">
         <div class="how-it-looks__header">
         <?php if( $section_title ): ?>

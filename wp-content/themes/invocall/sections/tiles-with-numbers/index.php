@@ -16,7 +16,7 @@
 
 <?php if( $group ): ?>
 <section class="tiles-with-numbers">
-    <?php load_element_styles( 'sections/tiles-with-numbers/dist', 'tiles-with-numbers-style' ); ?>
+    <?php load_element_styles( 'sections/tiles-with-numbers', 'tiles-with-numbers-style' ); ?>
 <?php if( $background ) {
     $image = wp_get_attachment_image( $background, 'full', false, array('class' => 'tiles-with-numbers__background tiles-with-numbers__background--img') ); 
     echo $image;

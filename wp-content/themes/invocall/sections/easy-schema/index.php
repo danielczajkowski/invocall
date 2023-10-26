@@ -17,7 +17,7 @@
 
 <?php if( $group ): ?>
 <section class="easy_schema">
-    <?php load_element_styles( 'sections/easy-schema/dist', 'easy-schema-style' ); ?>
+    <?php load_element_styles( 'sections/easy-schema', 'easy-schema-style' ); ?>
     <div class="page--width">
         <div class="easy_schema__wrapper offer__wrapper">
             <?php if( $section_title ): ?>

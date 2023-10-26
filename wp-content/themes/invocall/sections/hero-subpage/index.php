@@ -5,7 +5,7 @@
 
 <section class="hero-subpage<?php echo $hero_subpage_additional_content_toggler ? ' hero-subpage--additional-content' : ''; ?>">
     <?php load_element_styles( 'sections/hero-subpage', 'hero-subpage-style' ); ?>
-    <?php load_element_styles( 'sections/hero-subpage/dist', 'hero-subpage-style-2' ); ?>
+    <?php load_element_styles( 'sections/hero-subpage', 'hero-subpage-style-2' ); ?>
     <div class="hero-subpage__background-wrapper">
         <?php if( get_field('hero_subpage__background') ): ?>
             <figure class="hero-subpage__background">

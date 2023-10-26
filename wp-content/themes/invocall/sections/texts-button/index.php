@@ -3,7 +3,7 @@
 ?>
 <section class="texts-button">
     <?php load_element_styles( 'sections/texts-button', 'texts-button-style' ); ?>
-    <?php load_element_styles( 'sections/texts-button/dist', 'texts-button-style-2' ); ?>
+    <?php load_element_styles( 'sections/texts-button', 'texts-button-style-2' ); ?>
     <div class="page--width">
         <div class="texts-button__wrapper">
             <?php if( !empty( get_sub_field('section_title') ) ): ?>

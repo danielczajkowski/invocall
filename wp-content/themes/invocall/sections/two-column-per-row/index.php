@@ -20,7 +20,7 @@
 
 <?php if( $group ): ?>
 <section class="two_column_per_row">
-    <?php load_element_styles( 'sections/two-column-per-row/dist', 'two-column-per-row-style' ); ?>
+    <?php load_element_styles( 'sections/two-column-per-row', 'two-column-per-row-style' ); ?>
     <div class="page--width">
         <div class="two_column_per_row__wrapper offer__wrapper">
             <?php if( $section_title ): ?>

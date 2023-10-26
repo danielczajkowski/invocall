@@ -14,7 +14,7 @@
 ?>
 
 <section class="blocks-quote">
-    <?php load_element_styles( 'sections/block-quote/dist', 'block-quote-style' ); ?>
+    <?php load_element_styles( 'sections/block-quote', 'block-quote-style' ); ?>
     <div class="page--width">
         <div class="blocks-quote__wrapper offer__wrapper">
         <?php if( $section_title ): ?>

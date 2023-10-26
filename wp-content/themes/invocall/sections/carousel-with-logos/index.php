@@ -17,7 +17,7 @@
     <?php load_libs_script('swiper', 'swiper'); ?>
     <?php load_libs_script('carousel-with-logos', 'carousel-with-logos-scripts', ['swiper'], 'sections/'); ?>
     <?php load_element_styles( 'assets/libraries/css/swiper', 'swiper-style' ); ?>
-    <?php load_element_styles( 'sections/carousel-with-logos/dist', 'carousel-with-logos-style' ); ?>
+    <?php load_element_styles( 'sections/carousel-with-logos', 'carousel-with-logos-style' ); ?>
     <div class="page--width">
         <div class="carousel_with_logos__wrapper offer__wrapper">
             <?php if( $section_title ): ?>

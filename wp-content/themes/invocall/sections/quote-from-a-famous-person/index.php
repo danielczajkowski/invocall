@@ -6,7 +6,7 @@
 
 <?php if( $quote ): ?>
 <section class="quote-famous">
-    <?php load_element_styles( 'sections/quote-from-a-famous-person/dist', 'quote-from-a-famous-person-style' ); ?>
+    <?php load_element_styles( 'sections/quote-from-a-famous-person', 'quote-from-a-famous-person-style' ); ?>
     <?php if( $image ) {
     echo $image;
 } ?>

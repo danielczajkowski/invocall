@@ -1,13 +1,3 @@
-.image-text-button {
-    padding: 91px 0 60px;
-}
-
-@media screen and (min-width: 990px) {
-    .image-text-button {
-        padding: 90px 0 158px;
-    }
-}
-
 .image-text-button__section-title {
     margin-bottom: 57px;
     padding-right: 31px;

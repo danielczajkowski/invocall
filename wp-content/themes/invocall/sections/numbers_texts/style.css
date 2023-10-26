@@ -1,7 +1,3 @@
-.numbers-texts {
-    padding: 110px 0 60px;
-}
-
 @media screen and (min-width: 990px) {
     .numbers-texts__wrapper {
         display: flex;

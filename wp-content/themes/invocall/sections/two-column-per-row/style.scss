@@ -74,8 +74,16 @@
 
             letter-spacing: 0.5px;
 
+            &:hover {
+                svg {
+                    transform: translateX(5px);
+                }
+            }
+
             svg {
                 margin-left: 10px;
+                transition: transform 0.2s ease-in-out;
+                will-change: transform;
             }
         }
     }

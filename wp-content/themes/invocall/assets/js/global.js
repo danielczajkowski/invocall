@@ -78,7 +78,12 @@ if( nextSectionScroll ) {
     nextSectionScroll.forEach(element => {
         element.addEventListener('click', ()=>{
             const nextSection = element.closest('section').nextElementSibling;
-            nextSection.scrollIntoView({behavior: "smooth"});
+            const headerHeight = header.offsetHeight + 30;
+
+            window.scroll({
+                top: nextSection.getBoundingClientRect().top + window.pageYOffset - headerHeight,
+                behavior: "smooth"
+            });
         });
     });
 }

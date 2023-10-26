@@ -15,6 +15,8 @@
                 include('sections/two-columns-blocks/index.php');
             elseif( get_row_layout() == 'columns_numbers_texts' ):
                 include('sections/columns-numbers-texts/index.php');
+            elseif( get_row_layout() == 'tiles_with_numbers' ):
+                get_template_part('sections/tiles-with-numbers/index');
             endif;
         endwhile;
     endif;

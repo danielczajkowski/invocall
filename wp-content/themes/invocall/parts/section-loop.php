@@ -23,6 +23,17 @@
                 get_template_part('sections/data-info/index');
             elseif( get_row_layout() == 'why_we' ):
                 get_template_part('sections/why-we/index');
+            elseif( get_row_layout() == 'carousel_with_logos' ):
+                get_template_part('sections/carousel-with-logos/index');
+            elseif( get_row_layout() == 'how_its_look' ):
+                get_template_part('sections/how-it-looks/index');
+            elseif( get_row_layout() == 'content_with_decorative_text' ):
+                get_template_part('sections/content-with-decorative-text/index');
+            elseif( get_row_layout() == 'quote_from_a_famous_person' ):
+                get_template_part('sections/quote-from-a-famous-person/index');
+            elseif( get_row_layout() == 'carousel' ):
+                get_template_part('sections/carousel/index');
+
             endif;
         endwhile;
     endif;

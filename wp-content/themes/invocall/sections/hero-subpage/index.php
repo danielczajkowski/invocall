@@ -1,9 +1,11 @@
 <?php
     $hero_subpage_additional_content_toggler = get_field('hero_subpage_additional_content_toggler') ?: false;
+    $additional_content_size = get_field('additional_content_size') ?: false;
 ?>
 
 <section class="hero-subpage<?php echo $hero_subpage_additional_content_toggler ? ' hero-subpage--additional-content' : ''; ?>">
     <?php load_element_styles( 'sections/hero-subpage', 'hero-subpage-style' ); ?>
+    <?php load_element_styles( 'sections/hero-subpage/dist', 'hero-subpage-style-2' ); ?>
     <div class="hero-subpage__background-wrapper">
         <?php if( get_field('hero_subpage__background') ): ?>
             <figure class="hero-subpage__background">
@@ -33,14 +35,14 @@
 
                 if( $hero_subpage_aditional_content ):
             ?>
-                <div class="hero-subpage__texts hero-subpage__texts--bottom">
+                <div class="hero-subpage__texts hero-subpage__texts--bottom<?php echo $additional_content_size ? ' hero-subpage__texts--bottom--big' : ""; ?>">
                     <div class="hero-subpage__texts--bottom__header">
                     <?php if( $hero_subpage_aditional_content['heading'] ): ?>
                         <h2 class="hero-subpage__texts--bottom__heading"><?php echo $hero_subpage_aditional_content['heading']; ?></h2>
                     <?php endif; ?>
                     <?php if( $hero_subpage_aditional_content['content'] ): ?>
                         <div class="hero-subpage__texts--bottom__content">
-                            <?php echo $hero_subpage_aditional_content['content']; ?>
+                            <?php echo do_shortcode($hero_subpage_aditional_content['content']); ?>
                         </div>
                     <?php endif; ?>
                     <?php if( $hero_subpage_aditional_content['button_1'] || $hero_subpage_aditional_content['button_2']): ?>

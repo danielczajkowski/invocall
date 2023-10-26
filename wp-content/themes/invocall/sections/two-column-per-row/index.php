@@ -1,6 +1,21 @@
 <?php
     $section_title = get_sub_field('section_title') ?: '';
     $group = get_sub_field('group') ?: array();
+
+    $borders_above_tiles = false;
+    $content_top_size = 'default';
+    $content_top = '';
+    $tiles = array();
+
+    if( $group ) {
+        $borders_above_tiles = $group['borders_above_tiles'] ?: false;
+        $content_top_size = $group['content_top_size'] ?: 'default';
+
+        $content_top = $group['content_top'] ?: '';
+        $tiles = $group['tiles'] ?: array();
+    }
+
+
 ?>
 
 <?php if( $group ): ?>
@@ -15,10 +30,15 @@
                     </div>
                 </div>
             <?php endif; ?>
-            <?php if( $group ): ?>
+            <?php if( $tiles ): ?>
                 <div class="offer__col offer__col--right">
-                    <div class="two_column_per_row__tiles">
-                        <?php foreach($group as $tile): 
+                    <?php if( $content_top ): ?>
+                        <div class="content_top  two_column_per_row__content-top two_column_per_row__content-top--<?php echo $content_top_size; ?>">
+                            <?php echo $content_top; ?>
+                        </div>
+                    <?php endif; ?>
+                    <div class="two_column_per_row__tiles<?php echo $borders_above_tiles ? '' : ' two_column_per_row__tiles--no-borders'  ?>">
+                        <?php foreach($tiles as $tile): 
                             $header = $tile['header'] ?: '';
                             $content = $tile['content'] ?: '';
                             $link = $tile['link'] ?: array();

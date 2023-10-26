@@ -1,0 +1,35 @@
+.hero-subpage {
+    &--additional-content {
+        .hero-subpage {
+            &__texts {
+                &--bottom {
+                    &--big {
+                        margin-top: 30px;
+
+                        @media screen and (min-width: 768px) {
+                            margin-top: 40px;
+                        }
+
+                        @media screen and (min-width: 1200px) {
+                            margin-top: 60px;
+                        }
+
+                        .hero-subpage__texts--bottom__content {
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 1.4;
+
+                            @media screen and (min-width: 1200px) {
+                                font-size: 30px;
+                            }
+
+                            & + .hero-subpage__texts--bottom__buttons {
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

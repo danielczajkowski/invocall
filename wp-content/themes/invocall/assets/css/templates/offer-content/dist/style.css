@@ -29,6 +29,24 @@
     margin-bottom: 0;
   }
 }
+.offer__col--right-small-margin > div {
+  margin: 20px 0;
+}
+@media screen and (min-width: 990px) {
+  .offer__col--right-small-margin > div {
+    margin: 30px 0;
+  }
+}
+@media screen and (min-width: 990px) {
+  .offer__col--right-small-margin > div:first-child {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 990px) {
+  .offer__col--right-small-margin > div:last-child {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 990px) {
   .offer__col--header {
     position: sticky;

@@ -1,0 +1,76 @@
+.quote-famous {
+  color: #fff;
+  padding: 80px 0 32px;
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .quote-famous {
+    padding: 132px 0 32px;
+  }
+}
+.quote-famous__background {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+}
+.quote-famous__background--img {
+  z-index: 0;
+  object-fit: cover;
+  object-position: left top;
+}
+.quote-famous__background--gradient {
+  z-index: 1;
+  width: 100%;
+  background: linear-gradient(270deg, #0A1322 50.6%, rgba(10, 19, 34, 0.5) 106.46%);
+}
+@media screen and (min-width: 990px) {
+  .quote-famous__background--gradient {
+    background: linear-gradient(270deg, #0A1322 74.6%, rgba(10, 19, 34, 0.5) 106.46%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .quote-famous__background--gradient {
+    background: linear-gradient(270deg, #0A1322 50.6%, rgba(10, 19, 34, 0.5) 106.46%);
+  }
+}
+@media screen and (min-width: 1700px) {
+  .quote-famous__background--gradient {
+    background: linear-gradient(270deg, rgba(6, 17, 32, 0.98) 0%, #061120 38.17%, rgba(6, 17, 32, 0.3) 100%);
+  }
+}
+.quote-famous__content {
+  position: relative;
+  z-index: 2;
+  font-size: 28px;
+  width: 1030px;
+  max-width: 100%;
+  margin-left: auto;
+}
+@media screen and (min-width: 990px) {
+  .quote-famous__content {
+    font-size: 39.1px;
+  }
+}
+.quote-famous__quote {
+  font-weight: 400;
+}
+.quote-famous__quote br {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .quote-famous__quote br {
+    display: block;
+  }
+}
+.quote-famous__name {
+  text-align: right;
+  margin-top: 20px;
+}
+@media screen and (min-width: 990px) {
+  .quote-famous__name {
+    margin-top: 0;
+  }
+}

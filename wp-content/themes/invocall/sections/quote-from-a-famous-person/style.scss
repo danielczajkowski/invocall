@@ -1,0 +1,76 @@
+.quote-famous {
+    color: #fff;
+    padding: 80px 0 32px;
+    position: relative;
+
+    @media screen and (min-width: 1200px) {
+        padding: 132px 0 32px;
+    }
+
+    &__background {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        
+
+        &--img {
+            z-index: 0;
+            object-fit: cover;
+            object-position: left top;
+        }
+        &--gradient {
+            z-index: 1;
+            width: 100%;
+            background: linear-gradient(270deg, #0A1322 50.6%, rgba(10, 19, 34, 0.5) 106.46%);
+            
+            @media screen and (min-width: 990px) {
+                background: linear-gradient(270deg, #0A1322 74.6%, rgba(10, 19, 34, 0.5) 106.46%);
+            }
+
+            @media screen and (min-width: 1200px) {
+                background: linear-gradient(270deg, #0A1322 50.6%, rgba(10, 19, 34, 0.5) 106.46%);
+            }
+
+            @media screen and (min-width: 1700px) {
+                background: linear-gradient(270deg, rgba(6, 17, 32, 0.98) 0%, #061120 38.17%, rgba(6, 17, 32, 0.30) 100%);
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        font-size: 28px;
+        width: 1030px;
+        max-width: 100%;
+        margin-left: auto;
+
+        @media screen and (min-width: 990px) {
+            font-size: 39.1px;
+        }
+    }
+    &__quote {
+        font-weight: 400;
+
+        br {
+            display: none;
+
+            @media screen and (min-width: 1200px) {
+                display: block;
+            }
+        }
+    }
+    &__name {
+        text-align: right;
+        margin-top: 20px;
+
+        @media screen and (min-width: 990px) {
+            margin-top: 0;
+        }
+      
+    }
+
+}

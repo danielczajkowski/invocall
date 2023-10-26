@@ -1,0 +1,83 @@
+.carousel_with_logos {
+    position: relative;
+    overflow: hidden;
+
+    &__content_top {
+        *:first-child {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        * + *:not(:first-child) {
+            margin-top: 18px;
+        }
+    }
+    &__tile {
+        background-color: #fff;
+        padding: 50px 27px 37px;
+        text-align: center;
+
+        &:hover {
+            img,
+            svg {
+                filter: none;
+            }
+        }
+
+    }
+    &__header {
+        text-align: center;
+        font-size: 25px;
+        line-height: 1.4;
+    }
+    &__arrow {
+        display: block;
+        margin: 37px auto 50px;
+    }
+    &__logo {
+        height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img,
+        svg {
+            max-width: 100%;
+            height: auto;
+            filter: blur(13px);
+            will-change: filter;
+            transition: filter 0.3s ease-in-out;
+        }
+    }
+
+    &__swiper {
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .offer__col--header {
+        position: relative;
+        top: unset;
+    }
+
+    .swiper-slide {
+        height: auto;
+        min-height: 250px;
+
+        @media screen and (min-width: 990px) {
+            min-height: 340px;
+        }
+    }
+
+    .offer__col--right {
+
+        @media screen and (min-width: 990px) {
+            flex: 0 0 auto;
+            max-width: calc(100% - 320px);
+        }
+
+        @media screen and (min-width: 1200px) {
+            max-width: calc(100% - 282px);
+        }
+    }
+}

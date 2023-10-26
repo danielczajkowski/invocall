@@ -1,3 +1,8 @@
+.two_column_per_row__content-top--big {
+  font-size: 39.1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
 .two_column_per_row__tiles {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -13,6 +18,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 125px 86px;
   }
+}
+.two_column_per_row__tiles--no-borders .two_column_per_row__tile {
+  border-top: none;
+  padding-top: 0;
 }
 .two_column_per_row__tile {
   border-top: 1px solid #B9BBD1;

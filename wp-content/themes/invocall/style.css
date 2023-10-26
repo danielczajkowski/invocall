@@ -191,6 +191,26 @@ button:hover,
     background: var(--color-btn-hover);
 }
 
+.btn-primary--highlighted {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: #fff;
+    background-color: #0A1322;
+    border: 1px solid #0A1322;
+}
+
+.btn-primary--highlighted .highlight {
+    font-size: 16px;
+    margin-left: 8px;
+    line-height: 1.3;
+}
+
+.btn-primary--highlighted:hover {
+    color: #0A1322;
+    background: #fff;
+}
+
 .btn-secondary {
     background-color: transparent;
     border: 2px solid var(--color-btn);

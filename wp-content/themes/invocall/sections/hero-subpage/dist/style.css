@@ -1,0 +1,26 @@
+.hero-subpage--additional-content .hero-subpage__texts--bottom--big {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .hero-subpage--additional-content .hero-subpage__texts--bottom--big {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-subpage--additional-content .hero-subpage__texts--bottom--big {
+    margin-top: 60px;
+  }
+}
+.hero-subpage--additional-content .hero-subpage__texts--bottom--big .hero-subpage__texts--bottom__content {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+@media screen and (min-width: 1200px) {
+  .hero-subpage--additional-content .hero-subpage__texts--bottom--big .hero-subpage__texts--bottom__content {
+    font-size: 30px;
+  }
+}
+.hero-subpage--additional-content .hero-subpage__texts--bottom--big .hero-subpage__texts--bottom__content + .hero-subpage__texts--bottom__buttons {
+  margin-top: 30px;
+}

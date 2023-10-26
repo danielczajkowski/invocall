@@ -14,6 +14,7 @@ function wpse_setup_theme() {
    add_theme_support( 'post-thumbnails' );
    add_image_size( 'case-study-slider-thumb', 327, 215, true );
    add_image_size( 'easy-schema', 306, 260, true );
+   add_image_size( 'carousel', 99999, 536, true );
 }
 
 add_action( 'after_setup_theme', 'wpse_setup_theme' );
@@ -237,4 +238,14 @@ if ( ! function_exists( 'load_libs_script' ) ) {
 		}, 1);
 	}
 
+}
+
+add_action( 'init', 'theme_add_custom_shortcode' );
+function theme_add_custom_shortcode() {
+    add_shortcode( 'highlight', 'highlight_content' );
+}
+
+
+function highlight_content( $atts, $content = '' ) {
+    return '<span class="highlight"><span>' . $content . '</span></span>';
 }

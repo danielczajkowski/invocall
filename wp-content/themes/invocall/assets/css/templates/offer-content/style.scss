@@ -35,6 +35,28 @@
                     }
                 }
             }
+
+            &-small-margin {
+                & > div {
+                    margin: 20px 0;
+    
+                    @media screen and (min-width: 990px) {
+                        margin: 30px 0;
+                    }
+    
+                    &:first-child {
+                        @media screen and (min-width: 990px) {
+                            margin-top: 0;
+                        }
+                    }
+    
+                    &:last-child {
+                        @media screen and (min-width: 990px) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
         }
 
         &--header {

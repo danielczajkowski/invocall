@@ -1,4 +1,12 @@
 .two_column_per_row {
+    &__content-top {
+
+        &--big {
+            font-size: 39.1px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+    }
     &__tiles {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -11,6 +19,13 @@
         @media screen and (min-width: 1200px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 125px 86px;
+        }
+
+        &--no-borders {
+            .two_column_per_row__tile {
+                border-top: none;
+                padding-top: 0;
+            }
         }
     }
     &__tile {

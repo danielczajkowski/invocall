@@ -1,7 +1,20 @@
 .two_column_per_row__content-top--big {
-  font-size: 39.1px;
+  font-size: 24px;
   text-transform: uppercase;
   line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .two_column_per_row__content-top--big {
+    font-size: 39.1px;
+  }
+}
+.two_column_per_row__content-top--big br {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .two_column_per_row__content-top--big br {
+    display: block;
+  }
 }
 .two_column_per_row__tiles {
   display: grid;

@@ -2,9 +2,21 @@
     &__content-top {
 
         &--big {
-            font-size: 39.1px;
+            font-size: 24px;
             text-transform: uppercase;
             line-height: 1.2;
+
+            @media screen and (min-width: 768px) {
+                font-size: 39.1px;
+            }
+
+            br {
+                display: none;
+
+                @media screen and (min-width: 1200px) {
+                    display: block;
+                }
+            }
         }
     }
     &__tiles {

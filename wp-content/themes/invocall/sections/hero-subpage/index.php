@@ -1,21 +1,31 @@
 <?php
     $hero_subpage_additional_content_toggler = get_field('hero_subpage_additional_content_toggler') ?: false;
+    $bg_type = get_field('bg_type') ?: false;
     $additional_content_size = get_field('additional_content_size') ?: false;
+    $background = '';
+
+    if( $bg_type ) {
+        $background = get_field('hero_subpage__background_video') ?: false;
+    } else {
+        if( get_field('hero_subpage__background') ) {
+            $background = wp_get_attachment_image( get_field('hero_subpage__background'), 'full' );
+        }
+    }
 ?>
 
 <section class="hero-subpage<?php echo $hero_subpage_additional_content_toggler ? ' hero-subpage--additional-content' : ''; ?>">
     <?php load_element_styles( 'sections/hero-subpage', 'hero-subpage-style' ); ?>
     <?php load_element_styles( 'sections/hero-subpage', 'hero-subpage-style-2' ); ?>
     <div class="hero-subpage__background-wrapper">
-        <?php if( get_field('hero_subpage__background') ): ?>
+        <?php if( !$bg_type && $background ): ?>
             <figure class="hero-subpage__background">
-                <?php
-                $image_size = 'full';
-                $image_id = get_field('hero_subpage__background');
-                $image = wp_get_attachment_image( $image_id, $image_size );
-                echo $image;
-                ?>
+                <?php echo $background; ?>
             </figure>
+        <?php else: ?>
+            <video class="hero-subpage__background hero-subpage__background--video" autoplay muted loop playsinline>
+                <source src="<?php echo $background ?>" type="video/mp4">
+                <source src="<?php echo $background ?>" type="video/ogg">
+            </video>
         <?php endif; ?>
     </div>
 <?php if( !empty('hero_subpage_heading') && !empty('hero_subpage_text') ): ?>

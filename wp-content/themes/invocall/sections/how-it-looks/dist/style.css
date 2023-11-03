@@ -35,31 +35,77 @@
     column-gap: 24px;
   }
 }
+.how-it-looks__tile__left {
+  width: 100%;
+  background-color: #f6f7f8;
+  min-height: 60px;
+}
 @media screen and (min-width: 990px) {
   .how-it-looks__tile__left {
     max-width: 100%;
     width: 306px;
     flex: 0 0 auto;
+    min-height: unset;
   }
 }
 .how-it-looks__tile__title {
   font-size: 48.8px;
   text-transform: uppercase;
+  position: relative;
+}
+.how-it-looks__tile__title::before, .how-it-looks__tile__title::after {
+  top: -3px;
+}
+.how-it-looks__tile__number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #f6f7f8;
+  transition: opacity 0.3s ease-in-out;
+}
+.how-it-looks__tile__number.active {
+  opacity: 1;
+  visibility: visible;
+}
+.how-it-looks__tile__sticky {
+  position: sticky;
+  top: 100px;
+  z-index: 2;
+  display: flex;
+  column-gap: 24px;
+  flex-wrap: wrap;
 }
 @media screen and (min-width: 990px) {
-  .how-it-looks__tile__title {
-    position: sticky;
-    top: 101px;
+  .how-it-looks__tile__sticky {
+    flex-wrap: nowrap;
+  }
+}
+.how-it-looks__tile__right {
+  width: 100%;
+}
+.how-it-looks__tile__images {
+  position: relative;
+  min-height: 160px;
+}
+@media screen and (max-width: 600px) {
+  .how-it-looks__tile__images {
+    min-height: 200px;
   }
 }
 .how-it-looks__tile__image--wrapper {
-  position: relative;
-  text-align: right;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
 }
-@media screen and (max-width: 600px) {
-  .how-it-looks__tile__image--wrapper {
-    min-height: 200px;
-  }
+.how-it-looks__tile__image--wrapper.active {
+  opacity: 1;
 }
 .how-it-looks__tile__image--wrapper::before {
   content: "";
@@ -105,6 +151,40 @@
     bottom: 17px;
     left: 20px;
   }
+}
+.how-it-looks__tile__content {
+  margin-top: 80px;
+  display: grid;
+}
+.how-it-looks__tile__content--wrapper {
+  display: flex;
+  column-gap: 24px;
+}
+.how-it-looks__tile__content--wrapper:not(:first-child) {
+  position: relative;
+}
+.how-it-looks__tile__content--wrapper:not(:first-child)::after {
+  position: absolute;
+  content: "";
+  top: var(--after-top);
+  right: 0;
+  width: var(--after-width);
+  height: 0.5px;
+  background: #000;
+}
+.how-it-looks__tile__content--left {
+  display: none;
+}
+@media screen and (min-width: 990px) {
+  .how-it-looks__tile__content--left {
+    max-width: 100%;
+    width: 306px;
+    flex: 0 0 auto;
+    display: block;
+  }
+}
+.how-it-looks__tile__content--right {
+  width: 100%;
 }
 .how-it-looks__tile__content__header {
   font-size: 31.3px;

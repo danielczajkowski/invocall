@@ -20,7 +20,7 @@
     <?php load_libs_script('swiper', 'swiper'); ?>
     <?php load_libs_script('carousel-with-details', 'carousel-with-details-scripts', ['swiper'], 'sections/'); ?>
     <?php load_element_styles( 'assets/libraries/css/swiper', 'swiper-style' ); ?>
-    <?php load_element_styles( 'sections/carousel-with-details', 'carousel-with-details-style' ); ?>
+    <?php load_element_styles( 'sections/carousel-with-details/dist', 'carousel-with-details-style' ); ?>
     <div class="page--width">
         <div class="carousel_with_details__wrapper offer__wrapper">
             <?php if( $section_title ): ?>
@@ -38,27 +38,29 @@
                     </div>
                 <?php endif; ?>
                 <?php if( $tiles ): ?>
-                    <div class="carousel_with_details__swiper swiper">
-                        <div class="swiper-wrapper">
-                            <?php foreach( $tiles as $tile ): 
-                                    $header = $tile['header'] ?: '';
-                                    $content = $tile['content'] ?: '';
-                                ?>
-                                <div class="swiper-slide">
-                                    <div class="carousel_with_details__tile">
-                                        <?php if( $header ): ?>
-                                            <div class="carousel_with_details__header">
-                                                <?php echo $header; ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if( $content ): ?>
-                                            <div class="carousel_with_details__content">
-                                                <?php echo $content; ?>
-                                            </div>
-                                        <?php endif; ?>
+                    <div class="carousel_with_details__swiper--container">
+                        <div class="carousel_with_details__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <?php foreach( $tiles as $tile ): 
+                                        $header = $tile['header'] ?: '';
+                                        $content = $tile['content'] ?: '';
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <div class="carousel_with_details__tile">
+                                            <?php if( $header ): ?>
+                                                <div class="carousel_with_details__header">
+                                                    <?php echo $header; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if( $content ): ?>
+                                                <div class="carousel_with_details__content">
+                                                    <?php echo $content; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 <?php endif; ?>

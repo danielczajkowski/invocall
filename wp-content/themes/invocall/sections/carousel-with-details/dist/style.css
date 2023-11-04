@@ -1,10 +1,23 @@
 .carousel_with_details {
   position: relative;
-  overflow: hidden;
+}
+@media screen and (max-width: 989px) {
+  .carousel_with_details {
+    overflow: hidden;
+  }
 }
 .carousel_with_details__swiper {
   max-width: 100%;
   overflow: visible;
+  margin-left: 0;
+}
+.carousel_with_details__swiper--container {
+  position: relative;
+}
+@media screen and (min-width: 990px) {
+  .carousel_with_details__swiper--container {
+    overflow: hidden;
+  }
 }
 .carousel_with_details__tile {
   box-sizing: border-box;
@@ -85,10 +98,6 @@
 .carousel_with_details__navigation__button--prev {
   margin-right: 24px;
 }
-.carousel_with_details .offer__col--header {
-  position: relative;
-  top: unset;
-}
 .carousel_with_details .swiper-slide {
   height: auto;
   min-height: 250px;
@@ -100,12 +109,6 @@
 }
 @media screen and (min-width: 990px) {
   .carousel_with_details .offer__col--right {
-    flex: 0 0 auto;
-    max-width: calc(100% - 320px);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .carousel_with_details .offer__col--right {
-    max-width: calc(100% - 282px);
+    max-width: calc(100% - 330px);
   }
 }

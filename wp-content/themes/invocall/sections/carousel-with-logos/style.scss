@@ -1,6 +1,9 @@
 .carousel_with_logos {
     position: relative;
-    overflow: hidden;
+
+    @media screen and (max-width: 989px) {
+        overflow: hidden;
+    }
 
     &__content_top {
         *:first-child {
@@ -12,6 +15,22 @@
             margin-top: 18px;
         }
     }
+
+    &__swiper {
+        max-width: 100%;
+        overflow: visible;
+        margin-left: 0;
+
+        &--container {
+
+            position: relative;
+
+            @media screen and (min-width: 990px) {
+                overflow: hidden;
+            }
+        }
+    }
+
     &__tile {
         background-color: #fff;
         padding: 50px 27px 37px;
@@ -25,15 +44,7 @@
         }
 
     }
-    &__header {
-        text-align: center;
-        font-size: 25px;
-        line-height: 1.4;
-    }
-    &__arrow {
-        display: block;
-        margin: 37px auto 50px;
-    }
+
     &__logo {
         height: 86px;
         display: flex;
@@ -50,14 +61,38 @@
         }
     }
 
-    &__swiper {
-        max-width: 100%;
-        overflow: visible;
+    &__header {
+        text-align: center;
+        font-size: 25px;
+        line-height: 1.4;
     }
 
-    .offer__col--header {
-        position: relative;
-        top: unset;
+    &__content {
+        color: #FFF;
+        font-size: 14px;
+        line-height: 1.6;
+
+        @media screen and (min-width: 650px) {
+            font-size: 16px;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+
+        @media screen and (min-width: 650px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__arrow {
+        display: block;
+        margin: 37px auto 50px;
     }
 
     .swiper-slide {
@@ -70,14 +105,8 @@
     }
 
     .offer__col--right {
-
         @media screen and (min-width: 990px) {
-            flex: 0 0 auto;
-            max-width: calc(100% - 320px);
-        }
-
-        @media screen and (min-width: 1200px) {
-            max-width: calc(100% - 282px);
+            max-width: calc(100% - 330px);
         }
     }
 }

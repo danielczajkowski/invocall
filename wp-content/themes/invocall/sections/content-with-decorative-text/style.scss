@@ -3,6 +3,10 @@
     padding: 50px 20px 70px;
     position: relative;
 
+    .page--width {
+        box-sizing: border-box;
+    }
+
     &__content {
         color: #fff;
         text-align: center;

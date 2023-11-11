@@ -88,6 +88,9 @@ final class PYS extends Settings implements Plugin {
 	    add_action( 'wp_ajax_pys_get_gdpr_filters_values', array( $this, 'ajaxGetGdprFiltersValues' ) );
 	    add_action( 'wp_ajax_nopriv_pys_get_gdpr_filters_values', array( $this, 'ajaxGetGdprFiltersValues' ) );
 
+
+        add_action( 'wp_ajax_pys_get_pbid', array( $this, 'get_pbid_ajax' ) );
+        add_action( 'wp_ajax_nopriv_pys_get_pbid', array( $this, 'get_pbid_ajax' ) );
         /*
          * Restore settings after COG plugin
          * */
@@ -178,7 +181,7 @@ final class PYS extends Settings implements Plugin {
         else return false;
 
     }
-    function set_pbid()
+    public function set_pbid()
     {
         $pbidCookieName = 'pbid';
         $externalIdExpire = PYS()->getOption("external_id_expire");
@@ -194,13 +197,24 @@ final class PYS extends Settings implements Plugin {
             $uniqueId = bin2hex(random_bytes(16));
             $encryptedUniqueId = hash('sha256', $uniqueId);
             setcookie($pbidCookieName, $encryptedUniqueId, time() + ($externalIdExpire * 24 * 60 * 60), '/');
-
             return $encryptedUniqueId;
         }
 
         return null;
     }
+    public function get_pbid_ajax(){
+        if(defined('DOING_AJAX') && wp_doing_ajax()){
+            $pbidCookieName = 'pbid';
+            $isTrackExternalId = EventsManager::isTrackExternalId();
 
+
+            if (!isset($_COOKIE[$pbidCookieName]) && $isTrackExternalId) {
+                $uniqueId = bin2hex(random_bytes(16));
+                $encryptedUniqueId = hash('sha256', $uniqueId);
+                wp_send_json_success( array('pbid'=>$encryptedUniqueId));
+            }
+        }
+    }
     public function add_order_external_meta_data($order, $posted_data){
 
         $pbidCookieName = 'pbid';

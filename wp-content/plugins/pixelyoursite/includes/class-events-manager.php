@@ -85,6 +85,8 @@ class EventsManager {
             'last_visit_duration'               => PYS()->getOption('last_visit_duration'),
             'enable_success_send_form'          => PYS()->getOption( 'enable_success_send_form' ),
 			'ajaxForServerEvent'                => PYS()->getOption( 'server_event_use_ajax'),
+            "send_external_id" => PYS()->getOption( 'send_external_id'),
+            "external_id_expire"=> PYS()->getOption( 'external_id_expire')
 		);
 
 		$options['gdpr'] = array(

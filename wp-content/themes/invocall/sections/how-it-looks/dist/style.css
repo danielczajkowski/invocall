@@ -91,7 +91,7 @@
 }
 @media screen and (max-width: 600px) {
   .how-it-looks__tile__images {
-    min-height: 200px;
+    min-height: 130px;
   }
 }
 .how-it-looks__tile__image--wrapper {

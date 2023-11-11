@@ -4,7 +4,7 @@ Tags: Meta Pixel, Facebook Pixel, Facebook Conversion API, CAPI, Facebook Pixel 
 Requires at least: 3.0.1
 Requires PHP: 5.4
 Tested up to: 6.3
-Stable tag: 9.4.6
+Stable tag: 9.4.7.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -467,6 +467,26 @@ NO, absolutely not! We don't track any type of data about your website. We simpl
 
 
 == Changelog ==
+
+
+= PixelYourSite 9.4.7.1 =
+
+* Fixing a possible issue related to external ID option. 
+
+* Fixing small bugs and code improvements.
+
+
+
+= PixelYourSite 9.4.7 =
+
+* Ensuring that a notification about Ajax and consent integrations can be closed. 
+
+* Fixing a possible issue with events external IDs.
+
+* Text updates and small UI changes. 
+
+* WooCommerce compatibility check. 
+
 
 = PixelYourSite 9.4.6 =
 

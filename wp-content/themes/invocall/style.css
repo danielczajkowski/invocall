@@ -41,6 +41,10 @@ body, html{
     background: var(--body-color-1);
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 a {
     color: var(--color-white);
     text-decoration: none;

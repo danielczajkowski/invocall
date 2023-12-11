@@ -8,7 +8,8 @@
 <?php if( $tiles ): ?>
 <section class="carousel">
     <?php load_libs_script('swiper', 'swiper'); ?>
-    <?php load_libs_script('carousel', 'carousel-scripts', ['swiper'], 'sections/'); ?>
+    <?php load_gsap(); ?>
+    <?php load_libs_script('carousel', 'carousel-scripts', ['swiper', 'gsap-js'], 'sections/'); ?>
     <?php load_element_styles( 'assets/libraries/css/swiper', 'swiper-style' ); ?>
     <?php load_element_styles( 'sections/carousel', 'carousel-style' ); ?>
     <span class="carousel__bg--gradient"></span>

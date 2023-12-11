@@ -177,6 +177,23 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 // }
 // add_filter('pll_get_post_types', 'add_cpt_to_pll', 10, 2);
 
+if ( ! function_exists( 'load_gsap' ) ) {
+
+    function load_gsap() {
+        global $styles_arr;
+		global $filter_arr;
+
+        if ( ! in_array( 'gsap-js', $styles_arr ) && ! in_array( 'gsap-js', $filter_arr ) ) {
+            wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', array(), false, true );
+            array_push( $styles_arr, 'gsap-js' );
+        };
+        if ( ! in_array( 'gsap-st', $styles_arr ) && ! in_array( 'gsap-st', $filter_arr ) ) {
+            wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', array('gsap-js'), false, true );
+            array_push( $styles_arr, 'gsap-st' );
+        };
+    };
+};
+
 if ( ! function_exists( 'load_element_styles' ) ) {
 
 	function load_element_styles( $path, $key, $file_name = 'style' ) {
